@@ -1,0 +1,67 @@
+
+
+.Headtop {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    height: 50px;
+    img {
+        border-radius: 50%;
+        width: 15%;
+        height: 100%;
+    }
+
+
+    }
+
+
+    /*Big screen */
+
+
+    @media screen and (min-width: 768px) {
+        .hamBurger {
+            display: none;
+        }
+
+        .Headtop {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            justify-content: space-between;
+
+            img {
+                border-radius: 50%;
+                width: 4%;
+            }
+
+
+            .navigation {
+                width: 10%;
+                height: 90px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                z-index: 10;
+
+
+
+                ul {
+                    list-style: none;
+                    /* Remove the list-style */
+                    padding: 0;
+                    /* Optional: Remove default padding */
+                    margin: 0;
+                    /* Optional: Remove default margin */
+                }
+
+                li {
+                    margin-top: 5px;
+                    list-style: none;
+                    margin-left: 4px;
+                }
+            }
+
+
+        }
+    }

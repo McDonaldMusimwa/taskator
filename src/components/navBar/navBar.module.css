@@ -1,0 +1,87 @@
+.navBar li {
+  z-index: 30;
+  margin: 5px 2px;
+  padding: 5px;
+}
+.navBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  margin: 0;
+  list-style: none;
+  font-size: 2rem;
+  background-color: #acacac;
+}
+.navLink {
+  text-decoration: none;
+}
+.logo {
+  display: none;
+}
+.navbaritem {
+  margin: 2px; /* Adjust the value to reduce the space */
+  color: black;
+}
+.hide {
+  display: none;
+}
+
+/*Bigs screen style for navbar*/
+
+@media screen and (min-width: 768px) {
+  .navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #4444;
+   
+  }
+  .navLink{
+    text-decoration: none;
+  }
+  .logo {
+    display: block;
+    width: 100px;
+    margin: 20px 20px 50px 20px;
+  }
+  .navbaritem {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding-left: 45px;
+    height: 50px;
+  }
+  .icon{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .navbaritem:hover {
+    background: rgb(255, 204, 0);;
+    color:black; /* Change the color to your desired hover color */
+    cursor: pointer;
+  }
+  .hide {
+    display:inline;
+  }
+  .navBar li {
+    z-index: 30;
+    margin: 1px 2px;
+    padding: 1px;
+  }
+}

@@ -1,0 +1,14 @@
+li{
+    list-style: none;
+}
+
+@media screen and (min-width: 768px){
+    .div{
+        display: flex;
+        flex-direction: row;
+        li{
+            margin: 5px;
+        }
+    }
+
+}

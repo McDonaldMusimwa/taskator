@@ -1,0 +1,26 @@
+.MainPanel {
+    margin-bottom: 120px;
+}
+
+/*Big screen*/
+
+@media screen and (min-width: 768px) {
+
+
+    .DashboardContainer {
+        display: flex;
+        height: 150vh;
+        /* Ensure the container takes full viewport height */
+        margin-left: 17.5%;
+        /* To accommodate the NavBar width */
+    }
+
+    .MainPanel {
+        width: 100%;
+        /* Take the remaining 90% of the width */
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+        gap: 10px;
+    }
+}

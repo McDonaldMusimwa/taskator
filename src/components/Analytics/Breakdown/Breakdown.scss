@@ -1,0 +1,15 @@
+.Breakdown{
+ 
+    label{
+        font-weight: bold;
+        .card-divider {
+            width: 80%;
+            border: 5px solid var black;
+            border-radius: 50px;
+          }
+          
+        p{
+            font-weight:normal;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.back-drop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal- {
+    position: fixed;
+    top: 20vh;
+    left: 1%;
+    width: 80%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: white;
+}
+
+.header- {
+    display: block;
+    padding: 0.5rem;
+    width: 90%;
+    text-align: left;
+}
+
+.header- h3 {
+    margin: 0;
+    color: white;
+}
+
+.content- {
+    padding: 1rem;
+    height:90%;
+    width: 80%;
+}
+
+.actions- {
+    margin-top: 70px;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    justify-content: center;
+    background-color: rgb(255, 204, 0);
+}
+
+@media (min-width: 768px) {
+    .modal- {
+        left: calc(50% - 20rem);
+        width: 40rem;
+    }
+}

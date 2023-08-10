@@ -1,0 +1,63 @@
+
+.navigation {
+    width: 10%;
+    height: 25px;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 10;
+    margin-top: 15px;
+    position: relative;
+
+    ul {
+        list-style: none;
+        /* Remove the list-style */
+        padding: 0;
+        /* Optional: Remove default padding */
+        margin: 0;
+        /* Optional: Remove default margin */
+    }
+
+    li {
+        margin-top: 5px;
+        list-style: none;
+        margin-left: 4px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+       
+            transition: transform 0.3s ease-in-out;
+        
+            &:first-child {
+              transform-origin: top left;
+            }
+        
+            &:last-child {
+              transform-origin: bottom left;
+            }
+          }
+        
+          &.open {
+            span:first-child {
+              transform: rotate(45deg) translate(6px, 6px);
+            }
+        
+            span:nth-child(2) {
+              opacity: 0;
+            }
+        
+            span:last-child {
+              transform: rotate(-45deg) translate(6px, -6px);
+            }
+          }
+    }}
