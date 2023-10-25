@@ -1,10 +1,10 @@
 import React from 'react'
-import './Breakdown.scss'
+import styles from './Breakdown.module.scss';
 import Card from '../CardStyles/Card'
 const Breakdown = (props) => {
   return (
     <Card>
-        <div className='Breakdown'>
+        <div className={styles.Breakdown}>
             <h2>Tasks Breakdown</h2>
             <label>Completed Tasks<hr className="card-divider"></hr><p>5</p></label>
             <label>Tasks in progress<hr className="card-divider"></hr><p>6</p></label>

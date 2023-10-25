@@ -92,17 +92,14 @@ const EditTaskModal = ({ onClose, task }) => {
               onClick={(e) => e.stopPropagation()}
             ></input>
           </div>
-          <select
+          <label
             onChange={handleInputChange}
             value={editedTask.status}
             onClick={(e) => e.stopPropagation()}
           >
-            Status:
-            <option>Select Status</option>
-            <option value="notdone">Not done</option>
-            <option value="inprogress">In progress</option>
-            <option value="done">Done</option>
-          </select>
+            Completion status
+             <input type="range" id="points" name="points" min="0" max="10"/>
+          </label>
 
           <Button onClick={handleSave}> Changes</Button>
         </form>

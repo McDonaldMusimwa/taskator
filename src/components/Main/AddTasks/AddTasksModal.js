@@ -84,13 +84,10 @@ const AddTasks = (props) => {
             <label>Description</label>
             <input name="description" type="text" onChange={addDescriptionHandler} onClick={(e) => e.stopPropagation()}></input>
           </div>
-          <select onChange={addStatusHandler}  onClick={(e) => e.stopPropagation()}>
-            Status:
-            <option>Select Status</option>
-            <option value="notdone">Not done</option>
-            <option value="inprogress">In progress</option>
-            <option value="done">Done</option>
-          </select>
+          <label onChange={addStatusHandler}  onClick={(e) => e.stopPropagation()}>
+            Completion Status:
+            <input type="range" id="points" name="points" min="0" max="10"/>
+          </label>
 
           <button onClick={sendTask}>Save</button>
         </form>

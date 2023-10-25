@@ -1,16 +1,25 @@
 import React from "react";
-import styles from  "./Today.module.scss";
+import styles from "./Recently.module.scss";
 import TaskItem from "./TaskItem";
-const Today = (props) => {
 
+const Today = (props) => {
   return (
-    <div className={styles.ItemList}>
-  {props.tasks.map((tas)=>
-    <TaskItem key={tas._id}
-    title={tas.title}
-    description={tas.description}
-    status={tas.progress}/>
-    )}
+    <div className={styles.Tasks}>
+      {props.tasks.map((tas, index) => (
+        <div
+          key={tas._id}
+          
+        >
+          <TaskItem
+            title={tas.title}
+            description={tas.description}
+            status={tas.status}
+            starttime={tas.starttime}
+            endtime={tas.endtime}
+            backgroundClass={index % 2 === 0 ? 'EvenCard' : 'OddCard'}
+          />
+        </div>
+      ))}
     </div>
   );
 };

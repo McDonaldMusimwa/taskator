@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "./Head";
 import WeeklyCalender from "./WeeklyCalender";
-
+import styles from "./Calender.module.scss";
 import TaskItem from "./TaskItem/TaskItemCalendar";
 
 const Calender = (props) => {
@@ -22,23 +22,24 @@ const Calender = (props) => {
   };
 
   return (
-    
-    <div>
+    <>
       <Head />
       <WeeklyCalender date={selectedDay} onDateChange={filterChangeHandler} />
-      {filteredTasks.map((task) => (
-        <TaskItem
-          key={task._id}
-          title={task.title}
-          dateToDo={task.dateToDo}
-          status={task.status}
-          startTime={task.starttime}
-          endTime={task.endtime}
-          collaboration={task.collaboration}
-          description={task.description}
-        />
-      ))}
-    </div>
+      <div className={styles.CalenderItems}>
+        {filteredTasks.map((task, index) => (
+          <TaskItem
+            key={task._id}
+            title={task.title}
+            dateToDo={task.dateToDo}
+            status={task.status}
+            startTime={task.starttime}
+            endTime={task.endtime}
+            collaboration={task.collaboration}
+            description={task.description}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

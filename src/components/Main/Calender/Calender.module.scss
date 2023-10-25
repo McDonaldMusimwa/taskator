@@ -1,0 +1,16 @@
+.CalenderItems {
+    max-height: 250px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: yellow black;
+}
+
+/* Style the thumb */
+.CalenderItems::-webkit-scrollbar-thumb {
+    background-color: yellow;
+}
+
+/* Style the track */
+.CalenderItems::-webkit-scrollbar-track {
+    background-color: black;
+}

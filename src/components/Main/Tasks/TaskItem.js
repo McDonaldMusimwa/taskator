@@ -1,17 +1,19 @@
 import React from "react";
 import { LinearProgress } from "@mui/material";
-import styles from "./TaskItem.module.scss";
+import  "./TaskItem.scss";
 
 const TaskItem = (props) => {
+ 
 
   return (
-    <div className={styles.Card}>
-      <p>
+    <div className={`${props.backgroundClass} ${'CardContainer'} `}>
+      <span>
         <strong>{props.title}</strong>
-      </p>
+      </span>
 
-      <p>{props.description}</p>
-      <p>progress {props.progress}%</p>
+      <span>Task:{props.description}</span>
+      <span>progress: {props.status}%</span>
+      <span>startTime:{props.starttime} <br></br> endTime:{props.endtime}</span>
       <LinearProgress variant="determinate" value={props.status} />
     </div>
   );

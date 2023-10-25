@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ProfileName.scss";
+import styles from "./ProfileName.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPen, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import ChangeName from "../Modals/ChangeName";
@@ -24,7 +24,7 @@ const ProfileName = () => {
         <span className="span">Name: {data.name}</span>
         <span className="span">Email: {data.email}</span>
       </div>
-      <div className="Edit">
+      <div className={styles.Edit}>
         <span onClick={() => openModalHandler("name")}>
           <FontAwesomeIcon icon={faUserPen} values="ChangeName" />
           Change Name

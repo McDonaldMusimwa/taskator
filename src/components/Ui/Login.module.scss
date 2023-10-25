@@ -1,5 +1,24 @@
 .LoginBottom {
-   margin: 0 auto;
+    margin: 0 auto;
+}
+
+
+
+.LoginHome {
+    background: linear-gradient(100deg, rgb(246, 246, 17), rgb(246, 12, 12));
+    backdrop-filter: blur(5px);
+    mix-blend-mode: overlay;
+
+    align-items: center;
+  
+    height: 100%;
+    width: 100%;
+
+}
+
+.Blob {
+    width: 50px;
+
 }
 
 .login {
@@ -7,7 +26,18 @@
     max-width: 40rem;
     margin: 2rem auto;
     padding: 2rem;
-    
+    align-items: center;
+
+    justify-content: center;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.211); 
+
+
+}
+img{
+    width: 20px;
 }
 
 .control {
@@ -53,9 +83,31 @@
 }
 
 @media (min-width: 768px) {
+
+    button{
+        padding: 5px;
+    }
+
+    .LoginHome {
+        height: 100vh;
+
+
+    }
+
+
     .control {
         align-items: center;
         flex-direction: row;
     }
+
+    .Blob {
+        width: 100px;
+
+    }
+
+    .img{
+        width: 20px;
+    }
+  
 
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Documents.scss";
+import styles from "./Documents.module.scss";
 import Card from "../Analytics/CardStyles/Card";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ const Documents = () => {
   };
 
   return (
-    <div>
+    <div className={styles.Documents}>
       Documents
       <Card>
         <form onSubmit={addDocumentHandler} encType="multipart/form-data">

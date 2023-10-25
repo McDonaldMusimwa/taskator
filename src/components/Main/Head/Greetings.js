@@ -1,5 +1,5 @@
 import React from 'react'
-import './Greetings.scss'
+import styles from './Greetings.module.scss'
 
 const Greetings = () => {
     let tasks = 8
@@ -7,8 +7,8 @@ const Greetings = () => {
 
   return (
     <div>
-        <span className='name'>Hellow, {name}!</span>
-        <strong><span>You have {tasks} tasks today </span></strong>
+        <span className={styles.name}>Hellow, {name}!</span>
+        <strong><span className={styles.span}>You have {tasks} tasks today </span></strong>
 
     </div>
   )

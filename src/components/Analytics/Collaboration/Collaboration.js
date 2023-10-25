@@ -1,9 +1,10 @@
 import { XYPlot, VerticalBarSeries, XAxis, YAxis, DiscreteColorLegend } from 'react-vis';
 import Card from '../CardStyles/Card';
 const CollaboratorBreakdownChart = ({ tasks }) => {
+  console.log(tasks)
   // Count the total number of tasks and tasks with collaboration
   const totalTasks = tasks.length;
-  const collaborationTasks = tasks.filter(task => task.collaboration).length;
+  const collaborationTasks = tasks.filter(task => task.collaboration!== "None").length;
 
   // Prepare data for the bar chart
   const data = [

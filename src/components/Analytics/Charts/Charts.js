@@ -7,8 +7,8 @@ const Charts = (props) => {
 
   // Convert the grouped tasks to an array of objects with the 'angle' property
   const myData = tasks.map((task) => ({
-    angle: Math.floor(task.progress / 10),
-    label: `${task.progress}% complete`
+    angle: Math.floor(task.status / 10),
+    label: `${task.status}% complete`
   }));
 
   return (

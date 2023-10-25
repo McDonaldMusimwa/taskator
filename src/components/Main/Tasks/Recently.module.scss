@@ -3,10 +3,13 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
     grid-gap: 10px;
 }
+
 @media screen and (min-width: 768px) {
     .Tasks{
         display: flex;
         flex-direction: column;
-        overflow-x: hidden;
+        overflow-y: scroll;
+        min-height: 40vh;
+        max-height: 65vh;
     }
 }

@@ -1,27 +1,30 @@
 import React from "react";
 import Card from "../Analytics/CardStyles/Card";
-import "./Teams.scss";
+import styles from "./Teams.module.scss";
 import Top from "../Main/Head/Top";
 import Head from "../Main/Calender/Head";
 
 const Teams = () => {
   const teamMembers = [
     { name: "Yolanda", rel: "sister", key: "Yo" },
-    { name: "Nokubgoga", rel: "wife", key: "No" },
-    { name: "Sango", rel: "bro", key: "sA" },
+    { name: "Nokubonga", rel: "wife", key: "No" },
+    { name: "Sango", rel: "bro", key: "Sa" },
+    { name: "Munashe", rel: "son", key: "Mu" },
   ];
   return (
-    <div>
-        <Head />
-        <Top />
-      {teamMembers.map((member) => {
-        return (
-          <Card key={member.key}>
-            {member.name}
-            <p>Relationship: {member.rel}</p>
-          </Card>
-        );
-      })}
+    <div className={styles.Main}>
+      <Head />
+      <Top />
+      <div className={styles.Container}>
+        {teamMembers.map((member) => {
+          return (
+            <Card key={member.key}>
+              {member.name}
+              <p>Relationship: {member.rel}</p>
+            </Card>
+          );
+        })}
+      </div>
     </div>
   );
 };

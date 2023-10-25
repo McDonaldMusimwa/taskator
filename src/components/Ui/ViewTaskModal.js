@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./ViewTaskModal.module.scss";
 import EditTaskModal from "./EditTaskModal";
 
-
 const ViewTaskModal = (props) => {
   const [isEditing, setIsEditing] = useState(false);
+
   const toggleEditMode = () => {
     setIsEditing(!isEditing);
   };
@@ -14,6 +14,7 @@ const ViewTaskModal = (props) => {
   };
 
   const handleBackdropClick = (event) => {
+    // Check if the clicked element is the backdrop itself
     if (event.target === event.currentTarget) {
       onClose();
     }
@@ -38,7 +39,9 @@ const ViewTaskModal = (props) => {
             <span>{props.task.description}</span>
             <span>{props.task.status}</span>
           </div>
-          <button onClick={toggleEditMode} className={styles.Button}>Edit</button>
+          <button onClick={toggleEditMode} className={styles.Button}>
+            Edit
+          </button>
         </div>
       ) : (
         <EditTaskModal onClose={onClose} task={props.task} />

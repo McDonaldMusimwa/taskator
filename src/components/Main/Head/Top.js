@@ -1,15 +1,15 @@
-import './Top.scss'
-import userImage from './self3.jpg';
+import styles from './Top.module.scss'
+import userImage from '../../../assets/self3.jpg';
 
 function Top(){
 
     return(
-        <div>
+        <header className={styles.header} >
             <image src={userImage} alt='image'/>
             <h3>
                 Your Team members.
             </h3>
-        </div>
+        </header>
     )
 }
 
